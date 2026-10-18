@@ -1,0 +1,436 @@
+[
+  {
+    "id": "B01",
+    "title": "one question, end to end",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "what is decentralized ai?",
+    "answer": "ai that runs on machines nobody owns together. strangers do the work, and a shared ledger keeps score and pays them.",
+    "about": "we follow one question through a decentralized network, from the gateway to the machine that answers it to the ledger that pays."
+  },
+  {
+    "id": "B02",
+    "title": "three ways to trust an answer",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "how do you trust an answer you did not compute?",
+    "answer": "three ways: a math proof, a sealed chip, or many checkers who stake money on their verdict.",
+    "about": "we compare the three ways to verify ai work that someone else ran: zero-knowledge proofs, sealed hardware and staked scoring."
+  },
+  {
+    "id": "B03",
+    "title": "skin in the game",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "why would strangers be honest?",
+    "answer": "each one puts money down first, and lying loses it.",
+    "about": "we explain stake, slashing and rewards, and why together they make honesty the cheaper choice."
+  },
+  {
+    "id": "B04",
+    "title": "the oracle pattern",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "how does a blind ledger learn about the world?",
+    "answer": "staked reporters, and lying made more expensive than the truth.",
+    "about": "we show how a blockchain gets facts from the outside world, from price feeds to ai scores."
+  },
+  {
+    "id": "B05",
+    "title": "why building the model is harder",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "why is building a model harder than using it?",
+    "answer": "training makes machines talk to each other all the time. using a model does not.",
+    "about": "we explain why training a model across the internet is much harder than running one."
+  },
+  {
+    "id": "B06",
+    "title": "airbnb for gpus",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "who does the work?",
+    "answer": "people who rent out their own gpus. a network sends them jobs and pays per job.",
+    "about": "we look at open markets for renting gpus, and what makes renting from strangers safe."
+  },
+  {
+    "id": "B07",
+    "title": "agents with wallets",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "can software use it on its own?",
+    "answer": "yes. agents now get wallets, names and signed permission to spend.",
+    "about": "we explain what an ai agent is, and what changes when it gets its own wallet and identity."
+  },
+  {
+    "id": "B08",
+    "title": "who decides?",
+    "date": "",
+    "line": "bed",
+    "threads": [],
+    "question": "who decides on a network with no boss?",
+    "answer": "token holders vote, until the first real fight over the rules.",
+    "about": "we look at how a network with no company sets its rules, and where that can break."
+  },
+  {
+    "id": "P1",
+    "title": "the off-switch",
+    "date": "23 jun",
+    "line": "off",
+    "threads": [
+      "off",
+      "check"
+    ],
+    "question": "can anyone switch ai off?",
+    "answer": "yes. one government order did it, for everyone outside one country.",
+    "about": "a government order cut off a frontier model outside one country, in the same week a tiny open model won at one task."
+  },
+  {
+    "id": "L1",
+    "title": "when a network sells itself",
+    "date": "25 jun",
+    "line": "sells",
+    "threads": [
+      "sells"
+    ],
+    "question": "what happens when a network pays in its own token?",
+    "answer": "it sells a little of itself every block.",
+    "about": "we explain how paying rewards in a network's own token pushes its price down, and what reinvesting the rewards changes."
+  },
+  {
+    "id": "P2",
+    "title": "the permission slip",
+    "date": "30 jun",
+    "line": "off",
+    "threads": [
+      "off",
+      "wall"
+    ],
+    "question": "who decides who gets the strongest models?",
+    "answer": "one government review now does.",
+    "about": "the us began reviewing who gets access to frontier models, and we look at what that means for open alternatives."
+  },
+  {
+    "id": "L2",
+    "title": "why the frontier stays in one room",
+    "date": "2 jul",
+    "line": "wall",
+    "threads": [
+      "wall"
+    ],
+    "question": "can strangers train a frontier model together?",
+    "answer": "not yet. sharing the work costs more than doing it.",
+    "about": "we explain why frontier training needs one data centre, and the tricks that try to spread it across the internet."
+  },
+  {
+    "id": "P3",
+    "title": "the third rail",
+    "date": "7 jul",
+    "line": "agents",
+    "threads": [
+      "agents"
+    ],
+    "question": "how does an agent pay?",
+    "answer": "on two rival rails, both built on an unused corner of the web.",
+    "about": "two rival groups launched ways for ai agents to pay on their own, both built on the old http 402 status code."
+  },
+  {
+    "id": "P4",
+    "title": "train your own",
+    "date": "14 jul",
+    "line": "rent",
+    "threads": [
+      "off",
+      "wall",
+      "rent"
+    ],
+    "question": "why own a model at all?",
+    "answer": "renting is cheap to start, but the landlord sets the terms.",
+    "about": "prime intellect raised 130 million dollars on the bet that companies will train their own models."
+  },
+  {
+    "id": "L3",
+    "title": "the scorekeeper",
+    "date": "16 jul",
+    "line": "wall",
+    "threads": [
+      "wall",
+      "rent"
+    ],
+    "question": "what is scarce in training an agent?",
+    "answer": "a trustworthy judge of its work. not the computer.",
+    "about": "we explain why the hard part of training ai agents is judging their work, not finding the compute."
+  },
+  {
+    "id": "P5",
+    "title": "a name and a wallet",
+    "date": "21 jul",
+    "line": "agents",
+    "threads": [
+      "agents"
+    ],
+    "question": "what does an agent need to do business?",
+    "answer": "a wallet and a name. only the name is hard to fake.",
+    "about": "agent payments and agent identities both reached real scale, and we ask which of the two is hard to fake."
+  },
+  {
+    "id": "L4",
+    "title": "the name that stays",
+    "date": "23 jul",
+    "line": "agents",
+    "threads": [
+      "agents",
+      "check"
+    ],
+    "question": "how does an agent earn a reputation?",
+    "answer": "one public number that stays the same and is costly to abandon.",
+    "about": "we explain how an agent keeps one reputation across many services with a single stable identifier."
+  },
+  {
+    "id": "P6",
+    "title": "no handshake required",
+    "date": "28 jul",
+    "line": "agents",
+    "threads": [
+      "agents",
+      "check"
+    ],
+    "question": "does a server need to remember the agent?",
+    "answer": "no. every request now says everything, every time.",
+    "about": "the mcp specification removed sessions, so any server can answer any agent, and we look at what that changes."
+  },
+  {
+    "id": "L5",
+    "title": "say yes once",
+    "date": "30 jul",
+    "line": "agents",
+    "threads": [
+      "agents",
+      "check"
+    ],
+    "question": "who allowed the agent to try?",
+    "answer": "a signed, bounded permission that a stranger can check days later.",
+    "about": "we explain how a person's permission for an agent becomes a signed, limited token that others can check."
+  },
+  {
+    "id": "P7",
+    "title": "the gate was never the license",
+    "date": "4 aug",
+    "line": "check",
+    "threads": [
+      "check",
+      "wall",
+      "rent",
+      "sells"
+    ],
+    "question": "is an open model really open?",
+    "answer": "only if you have the memory to run it. pooling memory means checking strangers.",
+    "about": "the largest open model ever released stayed out of reach because of memory, and a network of gaming gpus claims a way around it."
+  },
+  {
+    "id": "L6",
+    "title": "nobody checks the answer",
+    "date": "6 aug",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "does anyone check every answer?",
+    "answer": "no. one possible check hangs over every answer, and lying stops paying.",
+    "about": "we explain optimistic verification: why most answers are never checked, and why the threat of a check is enough."
+  },
+  {
+    "id": "P8",
+    "title": "nobody to trust",
+    "date": "11 aug",
+    "line": "check",
+    "threads": [
+      "check",
+      "off",
+      "rent"
+    ],
+    "question": "what does privacy cost?",
+    "answer": "one lab priced it at 12.5x. a network with no \"us\" had to prove it instead.",
+    "about": "a frontier lab offered a 12.5x discount to train on your data, and we compare it with networks that prove privacy instead."
+  },
+  {
+    "id": "L7",
+    "title": "the wiring between them",
+    "date": "13 aug",
+    "line": "sells",
+    "threads": [
+      "sells",
+      "check"
+    ],
+    "question": "why is joining two safe systems unsafe?",
+    "answer": "the paid party can now reach the instrument that measures it.",
+    "about": "we explain why connecting two safe incentive systems can make both of them unsafe."
+  },
+  {
+    "id": "P9",
+    "title": "somebody has to sign",
+    "date": "18 aug",
+    "line": "off",
+    "threads": [
+      "off",
+      "rent"
+    ],
+    "question": "who signs a license for a network?",
+    "answer": "nobody. there is no one standing there to hand it to.",
+    "about": "one lab released two models under two licenses, and we explain why a license is a limit open networks cannot route around."
+  },
+  {
+    "id": "L8",
+    "title": "the entry fee",
+    "date": "20 aug",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "is there a check that needs no trust?",
+    "answer": "a proof. but the model has to be made countable first.",
+    "about": "we explain zero-knowledge proofs for ai, and the cost of turning a model into something a proof can cover."
+  },
+  {
+    "id": "P10",
+    "title": "the easy half",
+    "date": "29 aug",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "can useful ai work replace proof of work?",
+    "answer": "only if it stays as easy to check.",
+    "about": "we look at proposals to replace proof-of-work mining with useful ai work, and why checking is the hard part."
+  },
+  {
+    "id": "L9",
+    "title": "hardware attestation",
+    "date": "1 sep",
+    "line": "check",
+    "threads": [
+      "check",
+      "rent"
+    ],
+    "question": "what does a sealed chip prove?",
+    "answer": "that the room was right, not that the answer was right.",
+    "about": "we explain trusted execution environments: what sealed hardware proves, what it does not, and why customers use it first."
+  },
+  {
+    "id": "P11",
+    "title": "compute as collateral",
+    "date": "2 sep",
+    "line": "rent",
+    "threads": [
+      "rent"
+    ],
+    "question": "who buys the machines?",
+    "answer": "strangers on a chain, backed by a receipt.",
+    "about": "gpu purchases are now funded by investors on a chain, and we look at the receipt that is meant to secure them."
+  },
+  {
+    "id": "P12",
+    "title": "counterfactual verification",
+    "date": "16 sep",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "did the work make any difference?",
+    "answer": "the first instrument that asks runs a second party to compare.",
+    "about": "a new paper proposes checking whether ai work changed the outcome at all, not only whether it was done."
+  },
+  {
+    "id": "P13",
+    "title": "stake delegation",
+    "date": "22 sep",
+    "line": "sells",
+    "threads": [
+      "sells",
+      "check"
+    ],
+    "question": "who votes with staked tokens?",
+    "answer": "often whoever holds them for you, not you.",
+    "about": "money flowed into a network through staking products, and we follow who ended up holding the votes."
+  },
+  {
+    "id": "L10",
+    "title": "the stake-weighted middle",
+    "date": "24 sep",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "how do strangers agree on one score?",
+    "answer": "cut the extremes and keep the stake-weighted middle.",
+    "about": "we explain how a network turns many validators' scores into one number by trimming to the stake-weighted median."
+  },
+  {
+    "id": "P14",
+    "title": "attestation vs re-execution",
+    "date": "29 sep",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "which way of checking is winning?",
+    "answer": "neither removes trust. each one picks what to trust.",
+    "about": "re-running work got easier and hardware attestation got forged in the same weeks, and we compare the two."
+  },
+  {
+    "id": "L11",
+    "title": "memory access patterns",
+    "date": "1 oct",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "can a sealed chip still leak?",
+    "answer": "yes. the order it touches memory can spell out your prompt.",
+    "about": "we explain side channels: how watching memory access inside a sealed machine can reveal your prompt."
+  },
+  {
+    "id": "P15",
+    "title": "the inference subsidy",
+    "date": "6 oct",
+    "line": "sells",
+    "threads": [
+      "sells",
+      "rent"
+    ],
+    "question": "why is open ai so cheap to use?",
+    "answer": "the network prints its own token and sells it.",
+    "about": "we look at how open inference is sold below cost, and a proposal to pay for it with credits that only work inside the network."
+  },
+  {
+    "id": "L12",
+    "title": "could not check",
+    "date": "8 oct",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "what should a checker say when it cannot check?",
+    "answer": "a third answer. with only yes or no, it lies.",
+    "about": "we explain why a checker needs a third answer, \"could not check\", beside yes and no."
+  },
+  {
+    "id": "L13",
+    "title": "canonical serialization",
+    "date": "18 oct",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "why do honest parties look like liars?",
+    "answer": "a fingerprint covers bytes, not meaning.",
+    "about": "we explain why two honest parties can produce different fingerprints of the same work, and how a canonical format fixes it."
+  }
+]

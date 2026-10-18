@@ -1,0 +1,17 @@
+---
+import { SHOW } from '../data/site.js';
+const { current } = Astro.props;
+const PAGES = [['home', '/'], ['episodes', '/episodes/'], ['map', '/map/']];
+---
+<header class="nav">
+  <a class="wm" href="/" aria-label="plain strata, home"><b>plain</b><i>strata</i><u></u></a>
+  <nav aria-label="Pages">
+    {PAGES.map(([name, href]) => (
+      <a class="link" href={href} aria-current={name === current ? 'page' : undefined}>{name}</a>
+    ))}
+    <span class="acts">
+      <a class="btn ghost sm" href={SHOW} target="_blank" rel="noopener">listen</a>
+      <a class="btn primary sm" href="#subscribe" data-sub>subscribe</a>
+    </span>
+  </nav>
+</header>

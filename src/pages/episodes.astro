@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import Letter from '../components/Letter.astro';
+---
+<Base title="Episodes" current="episodes" description="Follow one question through the show, episode by episode, in the order they aired.">
+  <div class="ep-top">
+    <div class="ep-head">
+      <span class="kick">episodes</span>
+      <h1 class="h2">follow one question, episode by episode</h1>
+      <p class="body">every episode answers part of a bigger question. pick one and read the episodes in the order they built the answer.</p>
+    </div>
+    <div class="step">
+      <div class="step-lab"><b>1</b><span>pick a question</span></div>
+      <div class="picks" id="picks"></div>
+    </div>
+    <div class="step follow" id="follow">
+      <div class="step-lab"><b>2</b><span>follow it</span></div>
+      <div class="follow-head"><span class="lab" id="f-lab"></span><h2 class="h3" id="f-name"></h2><p class="body" id="f-body"></p></div>
+      <div class="route-wrap" id="route-wrap"><ol class="route" id="route"></ol></div>
+    </div>
+  </div>
+
+  <Letter line="this line continues in your inbox." />
+</Base>
+
+<script>
+  import { initEpisodes } from '../scripts/strata.js';
+  initEpisodes();
+</script>

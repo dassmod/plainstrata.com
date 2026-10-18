@@ -1,0 +1,27 @@
+---
+// The newsletter block, one shape everywhere. The form posts straight to Buttondown,
+// which opens its own confirmation page in a new tab.
+import { LISTEN, SUBSCRIBE_ACTION } from '../data/site.js';
+const { line = 'one long-read a week, in your inbox.' } = Astro.props;
+---
+<div class="sec letter-sec" id="subscribe">
+  <div class="letter">
+    <div class="side">
+      <span class="kick">the newsletter</span>
+      <h2 class="h3">{line}</h2>
+      <p class="body">every episode written out in full, with the sources. calm, precise, no hype. free.</p>
+    </div>
+    <form class="form" action={SUBSCRIBE_ACTION} method="post" target="_blank">
+      <label class="lab" for="email">your email</label>
+      <div class="row">
+        <input id="email" name="email" type="email" required placeholder="you@domain.com" autocomplete="email" />
+        <input type="hidden" name="embed" value="1" />
+        <button class="btn primary" type="submit">subscribe</button>
+      </div>
+      <div class="listen-row">
+        <span class="lab">or listen</span>
+        {LISTEN.filter(([, href]) => href).map(([name, href]) => <a href={href} target="_blank" rel="noopener">{name}</a>)}
+      </div>
+    </form>
+  </div>
+</div>

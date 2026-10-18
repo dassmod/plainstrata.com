@@ -1,0 +1,24 @@
+---
+import { CREATOR, LETTER, LISTEN } from '../data/site.js';
+const year = new Date().getFullYear();
+---
+<footer class="sec sitefoot">
+  <div class="foot-main">
+    <div class="credit">
+      <span class="lab">created by</span>
+      <a class="name" href={CREATOR.url} target="_blank" rel="noopener">{CREATOR.name}<i class="cursor"></i></a>
+      <a class="site-link" href={CREATOR.url} target="_blank" rel="noopener">{CREATOR.label}</a>
+    </div>
+    <div class="foot-r">
+      <span class="lab">decentralized ai, layer by layer</span>
+      <div class="listen-row">
+        {LISTEN.filter(([, href]) => href).map(([name, href]) => <a href={href} target="_blank" rel="noopener">{name}</a>)}
+        <a href={LETTER} target="_blank" rel="noopener">newsletter</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="lab">plain strata // {year}</span>
+    <a class="term" href="#subscribe" data-sub>$ plain strata --subscribe<i class="cursor"></i></a>
+  </div>
+</footer>

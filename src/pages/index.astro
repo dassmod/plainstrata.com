@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Letter from '../components/Letter.astro';
+import { SHOW } from '../data/site.js';
+---
+<Base current="home">
+  <div class="sec intro">
+    <span class="kick">what is plain strata?</span>
+    <h2 class="h2">a podcast and a newsletter that explain decentralized ai, layer by layer.</h2>
+    <p class="body">for people who are curious, not yet expert, and allergic to hype. two hosts, claire and peter, take one idea down to the ground and build it back up. it is the explanation we wish we had been given.</p>
+    <div class="intro-row">
+      <div class="legend"><span class="lab">two episodes a week</span><span class="lab">podcast + long-read</span><span class="lab">free</span></div>
+      <div class="acts"><a class="btn ghost sm" href={SHOW} target="_blank" rel="noopener">listen</a><a class="btn primary sm" href="#subscribe" data-sub>subscribe</a></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="tree-wrap" id="home-tree">
+      <noscript><p class="body">the question tree needs javascript. every episode is also on the <a href="/map/">map</a>.</p></noscript>
+    </div>
+  </div>
+
+  <Letter />
+
+  <div class="sec formats">
+    <div class="ep-head"><span class="kick">three ways in</span><h2 class="h3">every episode is one of three kinds</h2></div>
+    <div class="fmt-grid">
+      <div class="fmt basics"><div class="row"><i class="fm basics"></i><span class="lab">basics // start here</span></div><div class="bar"></div><h3 class="q">the ground floor</h3><p>eight evergreen episodes, b01 to b08. each one is a rung: one query end to end, then trust, money, oracles, training, compute, agents and governance.</p></div>
+      <div class="fmt layer"><div class="row"><i class="fm layer"></i><span class="lab">layer // thursday // 30 min</span></div><div class="bar"></div><h3 class="q">one concept, from the ground up</h3><p>what is physically happening, the mechanism step by step, and what breaks without it. still the right explanation a year later.</p></div>
+      <div class="fmt pulse"><div class="row"><i class="fm pulse"></i><span class="lab">pulse // tuesday // 20 min</span></div><div class="bar"></div><h3 class="q">the week's one real story</h3><p>one story that touches the decentralized stack, and why it matters. a week with no such story gets no pulse.</p></div>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import { initHome } from '../scripts/strata.js';
+  initHome();
+</script>
