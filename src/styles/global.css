@@ -30,6 +30,8 @@ body {
   margin: 0; background-color: var(--black); color: var(--white); font-family: var(--disp); font-size: 15px; line-height: 24px; -webkit-font-smoothing: antialiased;
 }
 html { scroll-padding-top: 80px; }
+/* the hidden attribute always wins, even over display: grid on the tooltip and the map card */
+[hidden] { display: none !important; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; color: inherit; }
@@ -188,8 +190,9 @@ li.on > .node > button { color: var(--white); }
 .chips-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); padding: var(--s4) var(--gut); }
 .chips-row .lab { margin-right: var(--s2); }
 .map-lines .maplegend { padding: var(--s3) var(--gut); border-top: 1px solid var(--g800); border-bottom: 0; }
-.maplegend .sum { margin-left: auto; color: var(--g300); }
-.map-wrap { position: relative; }
+.maplegend .sum { flex-basis: 100%; color: var(--g300); }
+.map-wrap { position: relative; margin-inline: var(--gut); }
+@media (max-width: 640px) { .map-wrap { margin-inline: 0; } }
 .pop { position: absolute; z-index: 4; width: 320px; max-width: calc(100% - 32px); padding: var(--s4); padding-right: var(--s6); display: grid; gap: var(--s2); justify-items: start; background: var(--ink); border: 1px solid var(--neon); box-shadow: var(--glow), 0 12px 32px rgba(0,0,0,.6); }
 .pop .x { position: absolute; top: var(--s2); right: var(--s2); width: 28px; height: 28px; display: grid; place-items: center; color: var(--g300); }
 .pop .x:hover { color: var(--white); }

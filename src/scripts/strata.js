@@ -366,7 +366,7 @@ export function initEpisodes() {
 /* ------------------------------------------------ the line map */
 function LineMap(canvas, opt) {
   const self = this;
-  let nodes = [], byId = {}, titles = false, titleX = 0, row = opt.row, cloud = [];
+  let nodes = [], byId = {}, titles = false, titleX = 0, listW = 0, row = opt.row, cloud = [];
   this.sel = opt.sel || 'check'; this.picked = null; this.hover = null;
   function route(a, b, xl) {
     const d1 = Math.abs(xl - a.x), d2 = Math.abs(b.x - xl);
@@ -392,8 +392,14 @@ function LineMap(canvas, opt) {
     let lw, cx;
     const top = opt.top;
     if (titles) {
-      // the tree takes the left 40% of the width, the episode list the right 60%
-      const tw = W * .4; lw = (tw - 72) / 5; cx = 40 + lw * 3; titleX = tw + 24;
+      // a narrow tree on the left, the episode list right beside it, all inside the reading column
+      // the tree starts at the left edge of the reading column, the same edge as the text above it
+      // the tree starts at the left edge of the reading column and the list ends at its right edge,
+      // so the map fills the same centred column as the other pages
+      const ctx = canvas.getContext('2d'); ctx.font = '500 14px Poppins, sans-serif';
+      listW = 120 + Math.max(...ALL.map((n) => ctx.measureText(n.t).width)) + 8;
+      titleX = W - listW;
+      lw = Math.min(56, Math.max(30, (titleX - 64 - 10) / 5)); cx = 5 + lw * 3;
     } else {
       lw = Math.min(36, (W - 56) / 6.4); cx = 32 + lw * 3.2; titleX = cx + lw * 2 + 40;
     }
@@ -415,7 +421,7 @@ function LineMap(canvas, opt) {
       const n = m.n, lit = onLine(n, sel), hot = self.hover === n || self.picked === n, s = 10;
       if (hot) {
         ctx.fillStyle = 'rgba(' + NEON + ',.2)'; ctx.fillRect(m.x - 11, m.y - 11, 22, 22);
-        if (titles) { ctx.fillStyle = 'rgba(' + NEON + ',.06)'; ctx.fillRect(titleX - 12, m.y - row / 2, W - titleX - 4, row); }
+        if (titles) { ctx.fillStyle = 'rgba(' + NEON + ',.06)'; ctx.fillRect(titleX - 12, m.y - row / 2, listW + 12, row); }
       }
       const neon = 'rgb(' + NEON + ')';
       if (n.f === 'pulse') {
@@ -428,14 +434,14 @@ function LineMap(canvas, opt) {
       ctx.textBaseline = 'middle';
       if ('letterSpacing' in ctx) ctx.letterSpacing = '1.6px';
       if (titles) {
+        // id, then the release date, then the title: the date sits right beside its episode
         ctx.textAlign = 'left'; ctx.font = '500 11px "JetBrains Mono", monospace'; ctx.fillStyle = lit || hot ? '#EAFF3D' : '#7C7C7C';
         ctx.fillText(n.id, titleX, m.y);
+        ctx.fillStyle = '#7C7C7C';
+        ctx.fillText((n.d || 'basics').toUpperCase(), titleX + 44, m.y);
         if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
         ctx.font = (lit || hot ? '500 ' : '400 ') + '14px Poppins, sans-serif'; ctx.fillStyle = lit || hot ? '#F5F5F5' : '#9A9A9A';
-        ctx.fillText(n.t, titleX + 48, m.y);
-        if ('letterSpacing' in ctx) ctx.letterSpacing = '1.6px';
-        ctx.textAlign = 'right'; ctx.font = '500 11px "JetBrains Mono", monospace'; ctx.fillStyle = '#7C7C7C';
-        ctx.fillText((n.d || 'basics').toUpperCase(), W - 24, m.y);
+        ctx.fillText(n.t, titleX + 120, m.y);
       } else if (lit || hot) {
         ctx.textAlign = 'left'; ctx.font = '500 10px "JetBrains Mono", monospace'; ctx.fillStyle = '#EAFF3D';
         ctx.fillText(n.id, m.x + 12, m.y);
@@ -447,7 +453,7 @@ function LineMap(canvas, opt) {
     let best = null, bd = 16;
     nodes.forEach((m) => {
       let d = Math.hypot(m.x - x, m.y - y);
-      if (titles && x > titleX - 8 && Math.abs(m.y - y) < row / 2) d = 0;
+      if (titles && x > titleX - 8 && x < titleX + listW && Math.abs(m.y - y) < row / 2) d = 0;
       if (d < bd) { bd = d; best = m.n; }
     });
     return best;
@@ -518,5 +524,5 @@ export function initMap() {
   window.addEventListener('resize', () => {
     clearTimeout(rt); rt = setTimeout(() => { hidePop(); map1.picked = null; map1.layout(); map1.redraw(); }, 120);
   });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => map1.redraw());
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { map1.layout(); map1.redraw(); });
 }
