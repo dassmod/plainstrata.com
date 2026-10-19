@@ -401,7 +401,12 @@ function LineMap(canvas, opt) {
       titleX = W - listW;
       lw = Math.min(56, Math.max(30, (titleX - 64 - 10) / 5)); cx = 5 + lw * 3;
     } else {
-      lw = Math.min(36, (W - 56) / 6.4); cx = 32 + lw * 3.2; titleX = cx + lw * 2 + 40;
+      // phone: the tree sits in the middle of the screen. The lanes run from -3 to +2 (5 gaps),
+      // and the stop labels need about 40px to the right of the last lane, so centre both together.
+      const label = 40;
+      lw = Math.min(56, (W - label - 48) / 5);
+      cx = (W - (lw * 5 + label)) / 2 + lw * 3;
+      titleX = cx + lw * 2 + 40;
     }
     nodes = ALL.map((n, i) => ({ n, x: cx + LINE[n.p].lane * lw, y: top + i * row }));
     nodes.cx = cx; nodes.lw = lw;
