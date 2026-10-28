@@ -432,5 +432,42 @@
     "question": "why do honest parties look like liars?",
     "answer": "a fingerprint covers bytes, not meaning.",
     "about": "we explain why two honest parties can produce different fingerprints of the same work, and how a canonical format fixes it."
+  },
+  {
+    "id": "P16",
+    "title": "integer overflow",
+    "date": "20 oct",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "can a guard made from the same arithmetic catch the theft?",
+    "answer": "no. it overflowed in step with the money.",
+    "about": "an automated auditor found a flaw that minted 184 times a network's supply, and we look at why the guard missed it."
+  },
+  {
+    "id": "L14",
+    "title": "nothing left to compare",
+    "date": "22 oct",
+    "line": "check",
+    "threads": [
+      "check"
+    ],
+    "question": "what is lost when a network stops comparing its judges?",
+    "answer": "the one thing that made a bad judgment cost anything.",
+    "about": "we explain how a network turns many judgments into one payment, and what an owner's new switch removes."
+  },
+  {
+    "id": "P17",
+    "title": "the pay split",
+    "date": "27 oct",
+    "line": "sells",
+    "threads": [
+      "sells",
+      "check"
+    ],
+    "question": "who pays when a network lets every project set its own cut?",
+    "answer": "the people behind the judges. one share is fixed first.",
+    "about": "bittensor lets each sub-network set its own pay split, and we explain why one share is held in place and who absorbs the change."
   }
 ]
